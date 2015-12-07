@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Haplicity\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.4.0\5b72bf48563ea8410e650de14aa33ff69a3e8c35\okio-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
+        <dex dex="C:\Users\Haplicity\Documents\AndroidDev\LifeCounter\app\build\intermediates\pre-dexed\debug\okio-1.4.0-2e27a9b7f169d0ea58086837acdcc5ef3dbe2909.jar" />
+    </item>
+    <item
+        jar="C:\Users\Haplicity\.gradle\caches\modules-2\files-2.1\io.socket\engine.io-client\0.6.1\39d4884a8c83649a24538ebc3674110d8b26db38\engine.io-client-0.6.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="39d4884a8c83649a24538ebc3674110d8b26db38">
+        <dex dex="C:\Users\Haplicity\Documents\AndroidDev\LifeCounter\app\build\intermediates\pre-dexed\debug\engine.io-client-0.6.1-a9642f1bc7a69dcd7b9c06ccbce3e2ac11e4f098.jar" />
+    </item>
+    <item
+        jar="C:\Users\Haplicity\.gradle\caches\modules-2\files-2.1\io.socket\socket.io-client\0.6.1\81cd1f1489968207e61b269dc0964f34e7b5a544\socket.io-client-0.6.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="81cd1f1489968207e61b269dc0964f34e7b5a544">
+        <dex dex="C:\Users\Haplicity\Documents\AndroidDev\LifeCounter\app\build\intermediates\pre-dexed\debug\socket.io-client-0.6.1-f1e2efe09197eeb3821d6daf318f29a02a1a8613.jar" />
+    </item>
+    <item
+        jar="C:\Users\Haplicity\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.4.0\40340c0748190fe897baf7bffbc1b282734294e5\okhttp-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
+        <dex dex="C:\Users\Haplicity\Documents\AndroidDev\LifeCounter\app\build\intermediates\pre-dexed\debug\okhttp-2.4.0-d1b4fe7da693b8ce6fa9f04a10ff967b2b7c6a01.jar" />
+    </item>
+    <item
+        jar="C:\Users\Haplicity\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp-ws\2.4.0\69206d28966656052a982ceded583abdeb41cf63\okhttp-ws-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="69206d28966656052a982ceded583abdeb41cf63">
+        <dex dex="C:\Users\Haplicity\Documents\AndroidDev\LifeCounter\app\build\intermediates\pre-dexed\debug\okhttp-ws-2.4.0-e123fc660897cb0bcbea86097f6b2ac2b09836c6.jar" />
+    </item>
+
+</items>
