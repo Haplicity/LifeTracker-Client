@@ -34,6 +34,56 @@ android:orientation="vertical" >
             android:layout_height="wrap_content"
             android:text="20"
             android:textSize="60sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+1"
+                android:textSize="15sp"
+                android:background="@android:color/white"
+                android:visibility="gone"
+                android:id="@+id/player1PlusOne_button" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+5"
+                android:textSize="15sp"
+                android:visibility="gone"
+                android:background="@android:color/white"
+                android:id="@+id/player1PlusFive_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-1"
+                android:textSize="15sp"
+                android:visibility="gone"
+                android:background="@android:color/white"
+                android:id="@+id/player1MinusOne_button" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-5"
+                android:textSize="15sp"
+                android:visibility="gone"
+                android:background="@android:color/white"
+                android:id="@+id/player1MinusFive_button" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -58,6 +108,56 @@ android:orientation="vertical" >
             android:layout_height="wrap_content"
             android:text="20"
             android:textSize="60sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+1"
+                android:textSize="15sp"
+                android:background="@android:color/holo_green_light"
+                android:visibility="gone"
+                android:id="@+id/player2PlusOne_button" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+5"
+                android:textSize="15sp"
+                android:background="@android:color/holo_green_light"
+                android:visibility="gone"
+                android:id="@+id/player2PlusFive_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-1"
+                android:textSize="15sp"
+                android:background="@android:color/holo_green_light"
+                android:visibility="gone"
+                android:id="@+id/player2MinusOne_button" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-5"
+                android:textSize="15sp"
+                android:background="@android:color/holo_green_light"
+                android:visibility="gone"
+                android:id="@+id/player2MinusFive_button" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
@@ -90,6 +190,56 @@ android:orientation="vertical" >
             android:layout_height="wrap_content"
             android:text="20"
             android:textSize="60sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+1"
+                android:textSize="15sp"
+                android:background="@android:color/holo_blue_light"
+                android:visibility="gone"
+                android:id="@+id/player3PlusOne_button" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+5"
+                android:textSize="15sp"
+                android:background="@android:color/holo_blue_light"
+                android:visibility="gone"
+                android:id="@+id/player3PlusFive_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-1"
+                android:textSize="15sp"
+                android:background="@android:color/holo_blue_light"
+                android:visibility="gone"
+                android:id="@+id/player3MinusOne_button" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-5"
+                android:textSize="15sp"
+                android:background="@android:color/holo_blue_light"
+                android:visibility="gone"
+                android:id="@+id/player3MinusFive_button" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -114,6 +264,56 @@ android:orientation="vertical" >
             android:layout_height="wrap_content"
             android:text="20"
             android:textSize="60sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+1"
+                android:textSize="15sp"
+                android:background="@android:color/holo_red_light"
+                android:visibility="gone"
+                android:id="@+id/player4PlusOne_button" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+5"
+                android:textSize="15sp"
+                android:background="@android:color/holo_red_light"
+                android:visibility="gone"
+                android:id="@+id/player4PlusFive_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-1"
+                android:textSize="15sp"
+                android:background="@android:color/holo_red_light"
+                android:visibility="gone"
+                android:id="@+id/player4MinusOne_button" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-5"
+                android:textSize="15sp"
+                android:background="@android:color/holo_red_light"
+                android:visibility="gone"
+                android:id="@+id/player4MinusFive_button" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

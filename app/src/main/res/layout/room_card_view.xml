@@ -39,26 +39,16 @@
                 android:layout_marginRight="5sp"/>
 
             <TextView
-                android:id="@+id/creator_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Creator: Jimmy Jones"
-                android:textSize="15sp"
-                android:layout_marginTop="10sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginLeft="5sp"
-                android:layout_below="@id/room_name" />
-
-            <TextView
                 android:id="@+id/room_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="This is a short description about this particular room."
                 android:textSize="15sp"
-                android:layout_below="@id/creator_name"
+                android:layout_below="@id/room_capacity"
                 android:layout_marginTop="10sp"
                 android:layout_marginStart="5sp"
-                android:layout_marginLeft="5sp"/>
+                android:layout_marginLeft="5sp"
+                android:layout_marginBottom="5sp"/>
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>

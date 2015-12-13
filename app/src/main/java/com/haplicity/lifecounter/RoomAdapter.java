@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -15,17 +16,19 @@ import java.util.List;
  */
 public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.ViewHolder> {
 
-    private Context mContext;
+    Context context;
     List<RoomInfo> roomList;
+    DataStore dataStore;
 
-    RoomAdapter(List<RoomInfo> rooms) {
+    RoomAdapter(List<RoomInfo> rooms, Context c) {
+        context = c;
         roomList = rooms;
+        dataStore = DataStore.get(context);
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         CardView mCardView;
         TextView mRoomName;
-        TextView mCreatorName;
         TextView mRoomDescription;
         TextView mRoomCapacity;
 
@@ -33,20 +36,31 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.ViewHolder> {
             super(v);
             mCardView = (CardView)itemView.findViewById(R.id.room_card_view);
             mRoomName = (TextView)itemView.findViewById(R.id.room_name);
-            mCreatorName = (TextView)itemView.findViewById(R.id.creator_name);
             mRoomDescription = (TextView)itemView.findViewById(R.id.room_description);
             mRoomCapacity = (TextView)itemView.findViewById(R.id.room_capacity);
-        }
 
-        @Override
-        public void onClick(View v) {
-
+            mCardView.setOnClickListener(
+                    new RecyclerView.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            clicked(getAdapterPosition());
+                        }
+                    }
+            );
         }
     }
 
-    public void delete(int position) {
-        roomList.remove(position);
-        notifyItemRemoved(position);
+    public void clicked(int position){
+        if (roomList.get(position).currentPlayers == 4) {
+            dataStore.setRoom(null);
+            Toast toast = Toast.makeText(context, "Room is full", Toast.LENGTH_SHORT);
+            toast.show();
+        } else {
+            dataStore.setRoom(roomList.get(position));
+
+            Toast toast = Toast.makeText(context, "'" + dataStore.getRoom().title + "' selected", Toast.LENGTH_SHORT);
+            toast.show();
+        }
     }
 
     @Override
@@ -58,7 +72,6 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.mRoomName.setText(roomList.get(position).title);
-        holder.mCreatorName.setText(roomList.get(position).creator);
         holder.mRoomDescription.setText(roomList.get(position).description);
         holder.mRoomCapacity.setText("" + roomList.get(position).currentPlayers +
                 "/" + roomList.get(position).maxPlayers);

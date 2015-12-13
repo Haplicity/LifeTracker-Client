@@ -21,6 +21,9 @@ public class SignUpActivity extends AppCompatActivity {
     EditText mUsername, mPassword, mConfirmPassword;
     Button mSignUp;
 
+    String username;
+    String password;
+
     DataStore dataStore;
 
     @Override
@@ -36,12 +39,13 @@ public class SignUpActivity extends AppCompatActivity {
         mPassword = (EditText)findViewById(R.id.password_editText);
         mConfirmPassword = (EditText)findViewById(R.id.confirmPassword_editText);
 
+        //setup SignUp onClick listener
         mSignUp = (Button)findViewById(R.id.signUp_button);
         mSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = mUsername.getText().toString().trim();
-                String password = mPassword.getText().toString().trim();
+                username = mUsername.getText().toString().trim();
+                password = mPassword.getText().toString().trim();
                 String confirmPassword = mConfirmPassword.getText().toString().trim();
 
                 if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
@@ -61,35 +65,45 @@ public class SignUpActivity extends AppCompatActivity {
                     } catch (JSONException e) { }
 
                     array.put(obj);
+
+                    //send signup event to server
                     dataStore.mSocket.emit("signup", array);
                 }
             }
         });
 
+        //upon receiving events, run the appropriate function
         dataStore.mSocket.on("signupResult", onSignup);
     }
 
+    //runs when signupResult event received from server
     public Emitter.Listener onSignup = new Emitter.Listener() {
         @Override
         public void call(Object... args) {
             JSONObject data = (JSONObject) args[0];
             boolean success;
+            String id = "";
             try {
+                //retrieve data
                 success = data.getBoolean("success");
-
-            } catch (JSONException e) {
-                return;
-            }
+                if (success) {
+                    id = data.getString("id");
+                }
+            } catch (JSONException e) { return; }
 
             if (success) {
-                String username = mUsername.getText().toString().trim();
-                String password = mPassword.getText().toString().trim();
+                //set the username and password
                 dataStore.setUsername(username);
                 dataStore.setPassword(password);
+                dataStore.setId(id);
                 finish();
             } else {
-                Toast toast = Toast.makeText(context, "An error occurred", Toast.LENGTH_SHORT);
-                toast.show();
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        Toast toast = Toast.makeText(context, "An error occurred", Toast.LENGTH_SHORT);
+                        toast.show();
+                    }
+                });
             }
         }
     };
